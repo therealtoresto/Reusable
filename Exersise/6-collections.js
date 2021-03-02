@@ -9,9 +9,8 @@ const collection = [
 ];
 
 const findPhoneByName = name => {
-    for (let i = 0; i < collection.length; i++) {
-        if (collection[i].name === name)
-        return collection[i].phone;
+    for (let obj of collection) {
+        if (obj.name === name) return obj.phone;
     }
 };
 
@@ -25,11 +24,6 @@ const hash = {
     'Rene Descartes': '+380889666723'
 };
 
-const findPhoneByName2 = name => {
-    for (let key in hash) {
-        if (key === name)
-        return hash[key];
-    }
-}
+const findPhoneByName2 = name => hash[name];
 
-console.log(`findPhoneByName('Mao Zedong') : ` + findPhoneByName2('Mao Zedong'));
+console.log(`findPhoneByName2('Mao Zedong') : ` + findPhoneByName2('Mao Zedong'));
