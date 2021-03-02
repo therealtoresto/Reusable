@@ -10,9 +10,6 @@ const fn = () => {
   obj2 = { name: 'Marcus Aurelius' };
 };
 
-const createUser = (name, city) => ({
-    name: `${name}`,
-    city: `${city}`  
-});
+const createUser = (name, city) => ({ name, city });
 
 console.dir(createUser('Marcus', 'Roma'));
